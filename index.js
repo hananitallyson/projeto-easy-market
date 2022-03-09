@@ -3,7 +3,6 @@
 
 var finalPrice = 0; //Variável do preço final. Ela está sendo declarada e atribuída um valor no escopo global para evitar o erro de NaN e de sempre que a função for chamada retornar ao valor de 0
 var incrementId = 0;
-var checkDeleted = [];
 var inputCheckbox;
 var lineOptions;
 
@@ -32,7 +31,6 @@ function addProduct() {
             inputCheckbox = document.querySelectorAll('input[type="checkbox"]');
             lineOptions = document.querySelectorAll('.newLine');
             finalPrice = finalPrice + aux['price']; //Faz o cálculo do preço final (soma de todos os produtos adicionados)
-            checkDeleted.push(false);
         }
     }
      /*(for (let index = 0; index < produtos.length; index++) { //Laço que vai percorrer o array de produtos
@@ -79,13 +77,11 @@ function deleteProduct() {
     var tableBody = document.getElementById('table-body'); //Pega o tbody da table
     tableBody.innerHTML = " "
       for (let index = 0; index < produtos.length; index++) { //Laço que vai percorrer o array de produtos
-        let aux = produtos[index]; //Mesma coisa que a outra variável auxiliar só que aplicando para produtos
-          
+            let aux = produtos[index]; //Mesma coisa que a outra variável auxiliar só que aplicando para produtos          
             tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td> ' + incrementId + ' <input type="checkbox" id="nome' + incrementId + '" name="produtc" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'; //Modifica o conteúdo do tbody, dizendo que ele vai ser o conteúdo anterior + uma nova linha com informações sobre o produto
             inputCheckbox = document.querySelectorAll('input[type="checkbox"]');
             lineOptions = document.querySelectorAll('.newLine');
             finalPrice = finalPrice + aux['price']; //Faz o cálculo do preço final (soma de todos os produtos adicionados)
-            checkDeleted.push(false);
 
             incrementId++;
 
