@@ -35,6 +35,11 @@ function addProduct() {
             checkDeleted.push(false);
         }
     }
+     /*(for (let index = 0; index < produtos.length; index++) { //Laço que vai percorrer o array de produtos
+          alert(produtos[index]["name"])
+          alert(produtos[index]["id"])
+      } */
+
     incrementId++;
     /* var auxTableBody = tableBody.innerHTML; */ //Lembrar de testar uma coisa com isso
 }
@@ -44,16 +49,45 @@ function buy() {
 }
 
 function deleteProduct() {
+    var vetor_deletar = []
     for (let index = 0; index < incrementId; index++) {
-        if (!checkDeleted[index]) {
-            if (inputCheckbox[index].checked) {
-                lineOptions[index].remove();
-                //let position = lineOptions.indexOf(index);
-                lineOptions.splice(index);
-                console.log(lineOptions[3]);
-                checkDeleted[index] = true;
-                alert(checkDeleted);
-            }
+        //if (!checkDeleted[index]) {
+        if (inputCheckbox[index].checked) {
+            vetor_deletar.push(index);
+
+            //lineOptions[index].splice(index, 1);
+            //lineOptions.splice(index);
+            //incrementId--;
         }
+    }
+    var tamanho_inicial = vetor_deletar.length 
+   lineOptions_aux = Array.from(lineOptions)
+
+   for (let index = 0; index < tamanho_inicial; index++) {
+        var elemento_index = vetor_deletar.pop()
+        lineOptions_aux.splice(elemento_index, 1);
+        produtos.splice(elemento_index, 1);
+
+        incrementId--;
+    } 
+    for (let index = 0; index < produtos.length; index++) { //Laço que vai percorrer o array de produtos
+          alert(produtos[index]["name"])
+          alert(produtos[index]["id"])
+      }
+
+    incrementId=0;      
+    var tableBody = document.getElementById('table-body'); //Pega o tbody da table
+    tableBody.innerHTML = " "
+      for (let index = 0; index < produtos.length; index++) { //Laço que vai percorrer o array de produtos
+        let aux = produtos[index]; //Mesma coisa que a outra variável auxiliar só que aplicando para produtos
+          
+            tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td> ' + incrementId + ' <input type="checkbox" id="nome' + incrementId + '" name="produtc" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'; //Modifica o conteúdo do tbody, dizendo que ele vai ser o conteúdo anterior + uma nova linha com informações sobre o produto
+            inputCheckbox = document.querySelectorAll('input[type="checkbox"]');
+            lineOptions = document.querySelectorAll('.newLine');
+            finalPrice = finalPrice + aux['price']; //Faz o cálculo do preço final (soma de todos os produtos adicionados)
+            checkDeleted.push(false);
+
+            incrementId++;
+
     }
 }
