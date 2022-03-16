@@ -4,6 +4,8 @@ var finalPrice = 0
 var incrementId = 0
 var inputCheckbox
 var lineOptions
+var arrayPrice = []
+var verificarPrice = [false, false, false, false]
 
 //Functions
 
@@ -30,7 +32,9 @@ function addProduct() {
             inputCheckbox = document.querySelectorAll('input[type="checkbox"]')
             lineOptions = document.querySelectorAll('.newLine')
             finalPrice = finalPrice + aux['price']
+            arrayPrice.push(aux['price'])
         }
+        buy()
     }
     incrementId++;
 }
@@ -43,8 +47,13 @@ function deleteProduct() {
     for (let index = 0; index < lineOptions.length; index++) {
         let aux = produtos[index]
         if (inputCheckbox[index].checked) {
+            console.log('Preço final inicial ' + index + ': ' + finalPrice)
+            finalPrice = finalPrice - arrayPrice[index]
+            console.log('Preço do item correspondente ' + index + ': ' + arrayPrice[index])
+            console.log('Preço final ' + index + ': ' + finalPrice)
+            console.log('\n --------------------- Próximo Item --------------------- \n');
             $(lineOptions[index]).remove()
-            finalPrice = finalPrice - aux['price']
         }
     }
+    buy()
 }
