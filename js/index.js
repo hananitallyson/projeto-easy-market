@@ -5,7 +5,8 @@ var incrementId = 0
 var inputCheckbox
 var lineOptions
 var arrayPrice = []
-var verificarPrice = [false, false, false, false]
+var teste
+
 
 //Functions
 
@@ -28,7 +29,7 @@ function addProduct() {
     for (let index = 0; index < produtos.length; index++) {
         let aux = produtos[index]
         if (aux['id'] == inputId) {
-            tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td><input type="checkbox" id="nome' + incrementId + '" name="produtc" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'
+            tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td id="' + incrementId + '"> ' + incrementId + '</td><td><input type="checkbox" id="nome' + incrementId + '" name="product" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'
             inputCheckbox = document.querySelectorAll('input[type="checkbox"]')
             lineOptions = document.querySelectorAll('.newLine')
             finalPrice = finalPrice + aux['price']
@@ -48,10 +49,11 @@ function deleteProduct() {
         let aux = produtos[index]
         if (inputCheckbox[index].checked) {
             console.log('Preço final inicial ' + index + ': ' + finalPrice)
-            finalPrice = finalPrice - arrayPrice[index]
+            finalPrice = finalPrice - aux['price']
+            /* arrayPrice.splice(index, 1)
             console.log('Preço do item correspondente ' + index + ': ' + arrayPrice[index])
             console.log('Preço final ' + index + ': ' + finalPrice)
-            console.log('\n --------------------- Próximo Item --------------------- \n');
+            console.log('\n --------------------- Próximo Item --------------------- \n'); */
             $(lineOptions[index]).remove()
         }
     }
