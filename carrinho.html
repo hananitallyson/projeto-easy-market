@@ -25,8 +25,8 @@
   <div class="carrinho container">
     <div class="carrinho-bloco">
       <div class="carrinho-bloco-inserir">
-        <label class="carrinho-bloco-inserir-label">Insira o ID do produto:</label>
-        <input class="carrinho-bloco-inserir-input" placeholder="Id do produto" type="number">
+        <label class="carrinho-bloco-inserir-label" for="input-id">Insira o ID do produto:</label>
+        <input class="carrinho-bloco-inserir-input" placeholder="Id do produto" type="number" id="input-id">
       </div>
 
       <table class="carrinho-bloco-tabela">
@@ -37,7 +37,7 @@
             <th class="tabela-cabecalho-linha-titulo">Preço</th>
           </tr>
         </thead>
-        <tbody class="carrinho-bloco-tabela-corpo">
+        <tbody class="carrinho-bloco-tabela-corpo" id="table-body">
 
         </tbody>
         <tfoot class="carrinho-bloco-tabela-rodape">
@@ -48,9 +48,9 @@
       </table>
 
       <div class="carrinho-bloco-btncontainer">
-        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
-        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-circle-minus"></i>Excluir</button>
-        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-basket-shopping"></i>Comprar</button>
+        <button class="carrinho-bloco-btncontainer-botao" type="button" onclick="addProduct()"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+        <button class="carrinho-bloco-btncontainer-botao" type="button" onclick="deleteProduct()"><i class="fa-solid fa-circle-minus"></i>Excluir</button>
+        <button class="carrinho-bloco-btncontainer-botao" type="button" onclick="makePurchase()"><i class="fa-solid fa-basket-shopping"></i>Comprar</button>
       </div>
       <p></p>
     </div>
@@ -62,5 +62,8 @@
       Desenvolvido por <a href="https://github.com/mosiah-adam" target="_blank">Mosiah "Akemi" Adam</a> & <a href="https://github.com/hananitallyson" target="_blank">Hanani Tallyson</a>.
     </span>
   </footer>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/database.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

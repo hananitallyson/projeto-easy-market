@@ -16,12 +16,14 @@
         <h1 class="area-login-cabecalho-titulo">Login</h1>
       </div>
       <form class="area-login-form" method="post">
-        <input class="area-login-form-input" type="text" name="nome" placeholder="usuário" autofocus required>
-        <input class="area-login-form-input" type="password" name="senha" placeholder="senha" required>
-        <button class="area-login-form-button" type="submit">Entrar</button>
+        <input class="area-login-form-input" type="text" name="nome" placeholder="usuário" autofocus required id="matriculation">
+        <input class="area-login-form-input" type="password" name="senha" placeholder="senha" required id="senha">
+        <button class="area-login-form-button" type="button" onclick="checkData()">Entrar</button>
       </form>
       <span class="area-login-cadastro">Não tem uma conta? <a href="#">Cadastre-se</a></span>
     </div>
   </div>
+  <script src="assets/js/database.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>
