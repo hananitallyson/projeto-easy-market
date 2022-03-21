@@ -284,12 +284,6 @@ body {
   box-shadow: var(--sombra);
 }
 
-.carrinho-bloco-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .carrinho-bloco-inserir-label {
   text-transform: uppercase;
   color: var(--branco);
@@ -315,32 +309,6 @@ body {
 .carrinho-bloco-inserir-input:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
-}
-
-.carrinho-bloco-btncontainer {
-  align-self: flex-end;
-  margin-top: 2rem;
-}
-
-.carrinho-bloco-btncontainer-botao {
-  margin-right: .5rem;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 1.2rem;
-  border-style: none;
-  border-radius: 15px;
-  border: 2px solid var(--azul);
-  background-color: var(--azul);
-  color: var(--branco);
-  transition: all 400ms;
-}
-
-.carrinho-bloco-btncontainer-botao:last-child {
-  margin-right: 0;
-}
-
-.carrinho-bloco-btncontainer-botao:hover {
-  background-color: var(--preto-alpha);
 }
 
 .carrinho-bloco-tabela {
@@ -377,6 +345,32 @@ body {
 
 .carrinho-bloco-tabela-rodape {
   background-color: var(--azul);
+}
+
+.carrinho-bloco-btncontainer {
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+.carrinho-bloco-btncontainer-botao {
+  margin-right: .5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1.2rem;
+  border-style: none;
+  border-radius: 15px;
+  border: 2px solid var(--azul);
+  background-color: var(--azul);
+  color: var(--branco);
+  transition: all 400ms;
+}
+
+.carrinho-bloco-btncontainer-botao:last-child {
+  margin-right: 0;
+}
+
+.carrinho-bloco-btncontainer-botao:hover {
+  background-color: var(--preto-alpha);
 }
 
 .usuario {
