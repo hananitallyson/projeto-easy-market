@@ -4,6 +4,7 @@ funcionario1 = {user: "Akemi", matriculation: "070", password: "777", age: 17};
 funcionario2 = {user: "Luiza", matriculation: "090", password: "999", age: 15};
 funcionario3 = {user: "Hanani", matriculation: "010", password: "111", age: 17};
 
+
 funcionarios = [funcionario1, funcionario2, funcionario3];
 
 //Produtos

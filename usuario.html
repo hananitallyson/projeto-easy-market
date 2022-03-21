@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body onload="respectiveUserSession()">
   <header class="cabecalho container">
     <h1 class="cabecalho-logo"><i class="fa-solid fa-cart-shopping cabecalho-logo-icon"></i>EasyMarket</h1>
     <nav class="cabecalho-menu">
@@ -26,13 +26,13 @@
     <div class="usuario-bloco">
       <div class="usuario-bloco-cabecalho">
         <h2 class="usuario-bloco-cabecalho-titulo"><i class="fa-solid fa-user usuario-bloco-cabecalho-icon"></i>Usuário</h2>
-        <button class="usuario-bloco-cabecalho-botao" type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</button>
+        <button class="usuario-bloco-cabecalho-botao" type="button" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</button>
       </div>
 
       <div class="usuario-bloco-info">
-        <span class="usuario-bloco-info-texto">Nome do(a) usuário(a):</span>
-        <span class="usuario-bloco-info-texto">Matrícula:</span>
-        <span class="usuario-bloco-info-texto">Idade:</span>
+        <span class="usuario-bloco-info-texto" id="nome-do-usuario">Nome do(a) usuário(a):</span>
+        <span class="usuario-bloco-info-texto" id="matricula-do-usuario">Matrícula:</span>
+        <span class="usuario-bloco-info-texto" id="idade-do-usuario">Idade:</span>
       </div>
     </div>
   </div>
@@ -43,5 +43,7 @@
       Desenvolvido por <a href="https://github.com/mosiah-adam" target="_blank">Mosiah "Akemi" Adam</a> & <a href="https://github.com/hananitallyson" target="_blank">Hanani Tallyson</a>.
     </span>
   </footer>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/database.js"></script>
 </body>
 </html>

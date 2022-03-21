@@ -6,12 +6,41 @@ var finalPrice = 0
 var incrementId = 0
 var inputCheckbox
 var lineOptions
-
-
+var sessionUser = 0
 
 //Functions
 
+    //Function that logs out
 
+    function logout() {
+        return window.location.href = 'index.html'
+    }
+
+    //Function that prints the user
+
+    function printUser(sessionUser) {
+        let nameUser = document.getElementById('nome-do-usuario')
+        let matriculationUser = document.getElementById('matricula-do-usuario')
+        let ageUser = document.getElementById('idade-do-usuario')
+        let aux = funcionarios[sessionUser];
+        nameUser.innerHTML = nameUser.innerHTML + ' ' + aux['user']
+        matriculationUser.innerHTML = matriculationUser.innerHTML + ' ' + aux['matriculation']
+        ageUser.innerHTML = ageUser.innerHTML + ' ' + aux['age']
+    }
+
+    //Function that shows the user of the respective session
+
+    function respectiveUserSession() {
+        if (sessionStorage.getItem('valueUser') == 0) {
+            printUser(0)
+        }
+        else if (sessionStorage.getItem('valueUser') == 1) {
+            printUser(1)
+        }
+        else if (sessionStorage.getItem('valueUser') == 2) {
+            printUser(2)
+        }
+    }
     
     //Function that checks whether the login is valid or not
 
@@ -21,6 +50,15 @@ function checkData() {
     for (let index = 0; index < funcionarios.length; index++) {
         let aux = funcionarios[index];
         if (aux['matriculation'] == valueInputMatriculation && aux['password'] == valueInputPassword) {
+            if (aux['matriculation'] == '010') {
+                sessionStorage.setItem('valueUser', 2);
+            }
+            else if (aux['matriculation'] == '070') {
+                sessionStorage.setItem('valueUser', 0);
+            }
+            else if (aux['matriculation'] == '090') {
+                sessionStorage.setItem('valueUser', 1);
+            }
             return window.location.href = 'home.html'
         }
     }
@@ -37,7 +75,6 @@ function deleteProduct() {
                 finalPrice = finalPrice - arrayPrice[index]
                 checkedRemove[index] = true
                 incrementId--
-                console.log('Increment id no remover: ' + incrementId);
             }
         }
     }
@@ -59,9 +96,7 @@ function addProduct() {
                 checkedRemove.push(false)
             }
         }
-
     incrementId++;
-    console.log('Increment id no adicionar: ' + incrementId);
 }
 
 function makePurchase() {
