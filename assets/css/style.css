@@ -444,7 +444,4 @@ body {
 
 .boxesSelect {
   margin-right: .5rem;
-  outline: 0;
-  border: 1px solid var(--azul);
-  background-color: var(--preto-alpha);
 }
