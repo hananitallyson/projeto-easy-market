@@ -434,3 +434,10 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+.comidas-grid, .bebidas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 250px;
+  gap: 2rem;
+}
