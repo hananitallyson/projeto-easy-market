@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | EasyMarket</title>
+  <script src="https://kit.fontawesome.com/5e77a69a8b.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="cabecalho container">
+    <h1 class="cabecalho-logo"><i class="fa-solid fa-cart-shopping cabecalho-logo-icon"></i>EasyMarket</h1>
+    <nav class="cabecalho-menu">
+      <ul class="cabecalho-menu-list">
+        <li class="cabecalho-menu-list-item"><a href="home.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li class="cabecalho-menu-list-item"><a href="carrinho.html"><i class="fa-solid fa-basket-shopping"></i></i>Carrinho</a></li>
+        <li class="cabecalho-menu-list-item"><a href="usuario.html"><i class="fa-solid fa-user"></i></i>Usuário</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="carrinho container">
+    <div class="carrinho-bloco">
+      <div class="carrinho-bloco-inserir">
+        <label class="carrinho-bloco-inserir-label">Insira o ID do produto:</label>
+        <input class="carrinho-bloco-inserir-input" placeholder="Id do produto" type="number">
+      </div>
+
+      <table class="carrinho-bloco-tabela">
+        <thead class="carrinho-bloco-tabela-cabecalho">
+          <tr class="tabela-cabecalho-linha">
+            <th class="tabela-cabecalho-linha-titulo">Nome do produto</th>
+            <th class="tabela-cabecalho-linha-titulo">Id</th>
+            <th class="tabela-cabecalho-linha-titulo">Preço</th>
+          </tr>
+        </thead>
+        <tbody class="carrinho-bloco-tabela-corpo">
+
+        </tbody>
+        <tfoot class="carrinho-bloco-tabela-rodape">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tfoot>
+      </table>
+
+      <div class="carrinho-bloco-btncontainer">
+        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-circle-minus"></i>Excluir</button>
+        <button class="carrinho-bloco-btncontainer-botao" type="button"><i class="fa-solid fa-basket-shopping"></i>Comprar</button>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  
+  <footer class="rodape container">
+    <span class="rodape-copy">Todos os direitos reservados a EasyMarket &copy;2022.</span>
+    <span class="rodape-desenvolvedores">
+      Desenvolvido por <a href="https://github.com/mosiah-adam" target="_blank">Mosiah "Akemi" Adam</a> & <a href="https://github.com/hananitallyson" target="_blank">Hanani Tallyson</a>.
+    </span>
+  </footer>
+</body>
+</html>
