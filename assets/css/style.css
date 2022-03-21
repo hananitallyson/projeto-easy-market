@@ -421,3 +421,16 @@ body {
 .usuario-bloco-cabecalho-botao:hover {
   background-color: var(--preto-alpha);
 }
+
+.usuario-bloco-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.usuario-bloco-info-texto {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
