@@ -448,6 +448,7 @@ body {
 .contato {
   background-color: var(--cinza-escuro);
   border-radius: 15px;
+  box-shadow: var(--sombra);
 }
 
 .contato-form {
