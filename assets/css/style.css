@@ -444,3 +444,64 @@ body {
   border-radius: 15px;
   box-shadow: var(--sombra);
 }
+
+.contato {
+  background-color: var(--cinza-escuro);
+  border-radius: 15px;
+}
+
+.contato-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato-form-label {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--branco);
+  outline: 0;
+  margin-bottom: .5rem;
+}
+
+.contato-form-input {
+  display: block;
+  border-style: none;
+  color: var(--branco);
+  border: 1px solid var(--azul);
+  border-radius: 15px;
+  background-color: var(--preto-alpha);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  width: 50%;
+  outline: 0;
+  transition: all 400ms;
+}
+
+.contato-form-input:focus {
+  color: var(--azul);
+}
+
+.contato-form-label-checkbox {
+  color: var(--branco);
+}
+
+.contato-form-input-enviar {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem 3rem;
+  border-style: none;
+  border-radius: 15px;
+  border: 2px solid var(--azul);
+  background-color: var(--azul);
+  color: var(--branco);
+  transition: all 400ms;
+  cursor: pointer;
+}
+
+.contato-form-input-enviar:hover {
+  background-color: var(--preto-alpha);
+}

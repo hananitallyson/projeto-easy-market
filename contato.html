@@ -23,7 +23,25 @@
     </nav>
   </header>
 
-
+  <main class="principal container">
+    <div class="contato">
+      <form class="contato-form">
+        <label class="contato-form-label" for="nomesobrenome">Nome e sobrenome</label>
+        <input class="contato-form-input"  type="text" id="nomesobrenome" required>
+        <label class="contato-form-label" for="email">Email</label>
+        <input class="contato-form-input"  type="email" id="email" placeholder="seuemail@dominio.com" required>
+        <label class="contato-form-label" for="telefone">Telefone</label>
+        <input class="contato-form-input" type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+        <label class="contato-form-label" for="mensagem">Mensagem</label>
+        <textarea class="contato-form-input" id="mensagem" cols="70" rows="10" required></textarea>
+        <label class="contato-form-label-checkbox">
+          <input type="checkbox" checked>
+          <span>Gostaria de receber nossas novidades por email?</span>
+        </label>
+        <input class="contato-form-input-enviar" type="submit" value="Enviar formulário">
+      </form>
+    </div>
+  </main>
 
   <footer class="rodape container">
     <span class="rodape-copy">Todos os direitos reservados a EasyMarket &copy;2022.</span>
