@@ -197,7 +197,7 @@ body {
   width: 100%;
 }
 
-.principal, .principal-section, .carrinho, .usuario {
+.principal, .carrinho, .usuario, .principal-section {
   min-height: calc(91vh - 4rem);
   width: 100%;
 }
