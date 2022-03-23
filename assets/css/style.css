@@ -530,3 +530,12 @@ body {
   padding: 0 1rem;
   margin: .5rem;
 }
+
+.principal-section-texto {
+  color: var(--branco);
+  text-align: justify;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  margin: 2rem .5rem;
+}
