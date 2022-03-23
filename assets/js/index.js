@@ -41,7 +41,38 @@ var sessionUser = 0
             printUser(2)
         }
     }
-    
+
+    //Function
+
+    /* function showRespectivePorducts() {
+        let timeout
+        timeout = setTimeout(printListProduct(), 5000)
+    } */
+
+    //Function that prints li of ul drinks
+
+    function printListDrinks() {
+        var ulBebida = document.getElementById('ul-bebidas')
+        for (let index = 0; index < produtos.length; index++) {
+            let aux = produtos[index]
+            if (aux['type'] == 'Bebida') {
+                ulBebida.innerHTML = ulBebida.innerHTML + '<li class="principal-section-lista-item"><strong>Nome: </strong>' + aux['name'] + ' <strong>Id: </strong> ' + aux['id'] + ' <strong>Preço: </strong>' + aux['price'] + '</li>'
+            }
+        }
+    }
+
+    //Function that prints li of ul foods
+
+    function printListFoods() {
+        var ulComida = document.getElementById('ul-comidas')
+        for (let index = 0; index < produtos.length; index++) {
+            let aux = produtos[index]
+            if (aux['type'] == 'Comida') {
+                ulComida.innerHTML = ulComida.innerHTML + '<li class="principal-section-lista-item"><strong>Nome: </strong>' + aux['name'] + ' <strong>Id: </strong> ' + aux['id'] + ' <strong>Preço: </strong> ' + aux['price'] + '</li>'
+            }
+        }
+    }
+
     //Function that checks whether the login is valid or not
 
 function checkData() {
@@ -89,7 +120,7 @@ function addProduct() {
             let aux = produtos[index]
             if (aux['id'] == inputId) {
                 finalPrice = finalPrice + aux['price']
-                tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td><input type="checkbox" id="nome' + incrementId + '" name="product" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'
+                tableBody.innerHTML = tableBody.innerHTML + '<tr class="newLine"><td><input type="checkbox" id="nome' + incrementId + '" name="product" class="boxesSelect" value="select">' + '<label for="nome' + incrementId+ '">' + aux['name'] + '</label>' +'</td><td>' + aux['type'] + '<td>' + aux['id'] + '</td><td>' + aux['price'] + '</td></tr>'
                 inputCheckbox = document.querySelectorAll('input[type="checkbox"]')
                 lineOptions = document.querySelectorAll('.newLine')
                 arrayPrice.push(aux['price'])
