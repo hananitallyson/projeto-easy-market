@@ -42,13 +42,6 @@ var sessionUser = 0
         }
     }
 
-    //Function
-
-    /* function showRespectivePorducts() {
-        let timeout
-        timeout = setTimeout(printListProduct(), 5000)
-    } */
-
     //Function that prints li of ul drinks
 
     function printListDrinks() {
@@ -129,6 +122,8 @@ function addProduct() {
         }
     incrementId++;
 }
+
+    //Function that performs the purchase
 
 function makePurchase() {
     if (incrementId != 0) {
